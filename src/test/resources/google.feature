@@ -1,6 +1,5 @@
 Feature: test
-    sfsfd sdfsfd
-    sdfsdf sdfsdfsdf
+
 
     @hotelBooking
     Scenario: Validate homepage

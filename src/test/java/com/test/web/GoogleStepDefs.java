@@ -6,7 +6,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.junit.Assert.assertTrue;
 
@@ -20,7 +20,7 @@ public class GoogleStepDefs {
 
     @Before
     public void beforeScenario(){
-        driver = new FirefoxDriver();
+        driver = new ChromeDriver();
         System.out.println("Set-up before the scenario");
     }
 
@@ -37,7 +37,8 @@ public class GoogleStepDefs {
 
     @When("^I check the title$")
     public void i_check_the_title() throws Throwable {
-        page.deleteBooking();
+        //page.deleteBooking();
+        page.returnTitle();
     }
 
     @Then("^I should get the title \"([^\"]*)\"$")
